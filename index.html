@@ -1329,13 +1329,23 @@
     /* ════════════════════ FOOTER ════════════════════ */
     footer {
       background: var(--blue-deep);
-      padding: 36px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
+      padding: 60px 6% 36px;
       border-top: 1px solid rgba(255, 255, 255, .05);
+      color: #fff;
+    }
+
+    .f-top {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+      align-items: start;
+    }
+
+    .f-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
     .f-logo {
@@ -1345,18 +1355,19 @@
     }
 
     .f-logo-mark {
-      width: 30px;
-      height: 30px;
+      width: 34px;
+      height: 34px;
       background: linear-gradient(135deg, var(--blue), var(--blue-dark));
-      border-radius: 7px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: var(--shadow-blue);
     }
 
     .f-logo-text {
       font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: #fff;
     }
@@ -1365,19 +1376,76 @@
       color: var(--gold);
     }
 
+    .f-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .f-social a {
+      width: 42px;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+    }
+
+    .f-social a:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(29, 78, 216, 0.3);
+    }
+
+    .f-map-container {
+      width: 100%;
+      height: 200px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      position: relative;
+    }
+
+    .f-map-container iframe {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(0.2) contrast(1.1) brightness(0.9);
+      transition: filter 0.3s;
+    }
+
+    .f-map-container:hover iframe {
+      filter: grayscale(0) contrast(1) brightness(1);
+    }
+
+    .f-bottom {
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
     .f-copy {
-      font-size: .75rem;
-      color: #334155;
+      font-size: .8rem;
+      color: #64748b;
     }
 
     .f-links {
       display: flex;
-      gap: 20px;
+      gap: 24px;
     }
 
     .f-links a {
-      font-size: .75rem;
-      color: #334155;
+      font-size: .8rem;
+      color: #64748b;
       text-decoration: none;
       transition: color .2s;
       font-weight: 500;
@@ -1395,8 +1463,21 @@
 
       .qwrap,
       .cwrap,
-      .cta-grid {
+      .cta-grid,
+      .f-top {
         grid-template-columns: 1fr;
+      }
+
+      .f-main {
+        text-align: center;
+      }
+
+      .f-logo, .f-social {
+        justify-content: center;
+      }
+
+      .f-bottom {
+        justify-content: center;
       }
 
       .steps-row {
@@ -2114,25 +2195,54 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="f-logo">
-      <div class="f-logo-mark">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
-          stroke-linecap="round" stroke-linejoin="round">
-          <rect x="1" y="3" width="15" height="13" rx="1" />
-          <path d="M16 8h4l3 5v4h-7V8z" />
-          <circle cx="5.5" cy="18.5" r="2.5" />
-          <circle cx="18.5" cy="18.5" r="2.5" />
-        </svg>
+    <div class="f-top">
+      <div class="f-info">
+        <div class="f-logo">
+          <div class="f-logo-mark">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="1" />
+              <path d="M16 8h4l3 5v4h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+          </div>
+          <div class="f-logo-text">Fletes <span>y</span> Mudanzas</div>
+        </div>
+        <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; max-width: 320px;">
+          Expertos en mudanzas familiares y empresariales. Brindamos confianza, cuidado y profesionalismo en cada kilómetro.
+        </p>
+        <div class="f-social">
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="f-logo-text">Fletes <span>y</span> Mudanzas</div>
+      <div class="f-map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13123.003444641355!2d-58.671060!3d-34.6644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbe010476472d%3A0xe9f798e217154fb!2sItuzaing%C3%B3%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1711925345678!5m2!1ses-419!2sar"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
-    <div class="f-copy">© 2025 Fletes y Mudanzas — Todos los derechos reservados</div>
-    <!-- <div class="f-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#quienes">Nosotros</a>
-      <a href="#proceso">Cómo funciona</a>
-      <a href="#contacto">Contacto</a>
-    </div> -->
+    <div class="f-bottom">
+      <div class="f-copy">© 2025 Fletes y Mudanzas — Todos los derechos reservados</div>
+      <div class="f-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#quienes">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
   </footer>
   <!-- WHATSAPP FLOTANTE -->
   <a href="https://wa.me/54911XXXXXXXX" class="wa-float" target="_blank" rel="noopener noreferrer"
