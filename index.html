@@ -1247,47 +1247,83 @@
       border-left: 1px solid rgba(255, 255, 255, .08);
     }
 
-    .cta-features {
+    .faq-container {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
       width: 100%;
-      max-width: 320px;
+      max-width: 480px;
     }
 
-    .cf {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+    .faq-item {
       background: rgba(255, 255, 255, .07);
       border: 1px solid rgba(255, 255, 255, .1);
       border-radius: 14px;
-      padding: 18px 20px;
       color: #fff;
       backdrop-filter: blur(8px);
-      transition: background .25s;
+      transition: background .25s, border-color .25s, box-shadow .2s;
     }
 
-    .cf:hover {
+    .faq-item:hover {
       background: rgba(255, 255, 255, .12);
+      border-color: rgba(255, 255, 255, .25);
     }
 
-    .cf-ico {
-      width: 40px;
-      height: 40px;
-      min-width: 40px;
-      background: rgba(255, 255, 255, .1);
-      border-radius: 10px;
+    .faq-item[open] {
+      background: rgba(255, 255, 255, .12);
+      border-color: rgba(255, 255, 255, .3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .faq-q {
+      padding: 18px 20px;
+      font-size: .92rem;
+      font-weight: 600;
+      cursor: pointer;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
+      gap: 16px;
+      list-style: none; /* fallback for Safari */
+      color: rgba(255, 255, 255, 0.95);
+      transition: color 0.2s;
     }
 
-    .cf-text {
-      font-size: .85rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, .9);
-      line-height: 1.4;
+    .faq-q::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 400;
+      color: #93c5fd;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+      color: var(--gold);
+    }
+
+    .faq-a {
+      padding: 0 20px 20px;
+      font-size: .86rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, .78);
+      animation: fadeInDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ════════════════════ FOOTER ════════════════════ */
@@ -2044,40 +2080,33 @@
         </div>
       </div>
       <div class="cta-r">
-        <div class="cta-features">
-          <div class="cf">
-            <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="rgba(255,255,255,.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12" />
-              </svg></div>
-            <div class="cf-text">Presupuesto sin cargo, claro y sin letras chicas</div>
-          </div>
-          <div class="cf">
-            <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="1" y="3" width="15" height="13" rx="1" />
-                <path d="M16 8h4l3 5v4h-7V8z" />
-                <circle cx="5.5" cy="18.5" r="2.5" />
-                <circle cx="18.5" cy="18.5" r="2.5" />
-              </svg></div>
-            <div class="cf-text">Flota propia y personal altamente capacitado</div>
-          </div>
-          <div class="cf">
-            <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg></div>
-            <div class="cf-text">Disponibles 24 hs, los 365 días del año</div>
-          </div>
-          <div class="cf">
-            <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg></div>
-            <div class="cf-text">CABA, Gran Buenos Aires e interior del país</div>
-          </div>
+        <div class="faq-container">
+          <div style="font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 6px;">Preguntas Frecuentes</div>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-q">1. ¿En qué zonas trabajan?<span class="faq-icon">+</span></summary>
+            <div class="faq-a">Trabajamos en CABA, Gran Buenos Aires y todo el interior del país. También realizamos fletes y mudanzas a la costa atlántica.</div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-q">2. ¿Cuál es el horario de atención?<span class="faq-icon">+</span></summary>
+            <div class="faq-a">Atendemos todos los días de la semana, las 24 horas. No importa si necesitás coordinar de madrugada o un feriado, siempre hay alguien disponible.</div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-q">3. ¿El presupuesto tiene algún costo?<span class="faq-icon">+</span></summary>
+            <div class="faq-a">No, el presupuesto es completamente sin cargo. Podés consultarnos por WhatsApp o completar el formulario y te respondemos a la brevedad con todos los detalles.</div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-q">4. ¿Pueden mover muebles grandes por escalera o ascensor?<span class="faq-icon">+</span></summary>
+            <div class="faq-a">Sí. Contamos con personal capacitado para realizar movimientos internos por escalera y/o ascensor sin riesgo para tus pertenencias. En casos especiales también hacemos trabajos con soga.</div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-q">5. ¿Hacen repartos para negocios o emprendedores?<span class="faq-icon">+</span></summary>
+            <div class="faq-a">Sí. Además de mudanzas, realizamos mini fletes y repartos para empresas y emprendedores con amplia disponibilidad horaria. Consultanos según tu necesidad y te armamos una solución a medida.</div>
+          </details>
         </div>
       </div>
     </div>
