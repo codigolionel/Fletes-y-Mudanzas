@@ -1,930 +1,2096 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fletes Rubén | Mudanzas Profesionales Buenos Aires</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fletes y Mudanzas | Mudanzas Profesionales Buenos Aires</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1d4ed8;
+      --blue-dark: #1e3a8a;
+      --blue-deep: #0f172a;
+      --blue-soft: #eff6ff;
+      --blue-mid: #bfdbfe;
+      --gold: #f59e0b;
+      --gold-light: #fef3c7;
+      --text: #0f172a;
+      --text-2: #334155;
+      --text-3: #64748b;
+      --text-4: #94a3b8;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .04);
+      --shadow: 0 4px 16px rgba(0, 0, 0, .08), 0 2px 6px rgba(0, 0, 0, .04);
+      --shadow-md: 0 8px 32px rgba(0, 0, 0, .10), 0 4px 12px rgba(0, 0, 0, .05);
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, .12), 0 8px 24px rgba(0, 0, 0, .06);
+      --shadow-blue: 0 8px 32px rgba(29, 78, 216, .28);
+      --shadow-gold: 0 6px 24px rgba(245, 158, 11, .30);
+      --r: 12px;
+      --r-lg: 20px;
+    }
 
-:root {
-  --blue:       #1d4ed8;
-  --blue-dark:  #1e3a8a;
-  --blue-deep:  #0f172a;
-  --blue-soft:  #eff6ff;
-  --blue-mid:   #bfdbfe;
-  --gold:       #f59e0b;
-  --gold-light: #fef3c7;
-  --text:       #0f172a;
-  --text-2:     #334155;
-  --text-3:     #64748b;
-  --text-4:     #94a3b8;
-  --bg:         #f8fafc;
-  --white:      #ffffff;
-  --border:     #e2e8f0;
-  --shadow-sm:  0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
-  --shadow:     0 4px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04);
-  --shadow-md:  0 8px 32px rgba(0,0,0,.10),0 4px 12px rgba(0,0,0,.05);
-  --shadow-lg:  0 20px 60px rgba(0,0,0,.12),0 8px 24px rgba(0,0,0,.06);
-  --shadow-blue:0 8px 32px rgba(29,78,216,.28);
-  --shadow-gold:0 6px 24px rgba(245,158,11,.30);
-  --r:          12px;
-  --r-lg:       20px;
-}
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    html {
+      scroll-behavior: smooth
+    }
 
-/* ── SVG icon helper ── */
-.icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
-.icon svg{display:block;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased
+    }
 
-/* ── SECTION COMMONS ── */
-section{padding:96px 7%;}
-.tag{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:14px;}
-.tag::before{content:'';width:22px;height:2px;background:linear-gradient(90deg,var(--blue),var(--gold));border-radius:2px;}
-h2.sec-title{font-family:'Poppins',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:800;line-height:1.12;color:var(--text);margin-bottom:14px;letter-spacing:-.5px;}
-p.sec-sub{font-size:.97rem;color:var(--text-3);line-height:1.82;max-width:520px;margin-bottom:52px;}
+    /* ── SVG icon helper ── */
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-/* ════════════════════ NAV ════════════════════ */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:300;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 6%;height:68px;
-  background:rgba(255,255,255,.97);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(226,232,240,.9);
-  box-shadow:0 1px 20px rgba(15,23,42,.05);
-}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo-mark{
-  width:36px;height:36px;
-  background:linear-gradient(135deg,var(--blue),var(--blue-dark));
-  border-radius:9px;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:var(--shadow-blue);
-}
-.logo-text{font-family:'Poppins',sans-serif;font-size:1.2rem;font-weight:800;color:var(--text);letter-spacing:-.3px;}
-.logo-text span{color:var(--blue);}
-.nav-links{display:flex;gap:28px;}
-.nav-links a{font-size:.84rem;font-weight:500;color:var(--text-3);text-decoration:none;transition:color .2s;}
-.nav-links a:hover{color:var(--blue);}
-.btn-nav{
-  display:inline-flex;align-items:center;gap:7px;
-  background:linear-gradient(135deg,var(--blue),var(--blue-dark));
-  color:#fff;font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:600;
-  text-decoration:none;padding:10px 22px;border-radius:50px;
-  border:none;cursor:pointer;box-shadow:var(--shadow-blue);
-  transition:transform .2s,box-shadow .2s;
-}
-.btn-nav:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(29,78,216,.35);}
+    .icon svg {
+      display: block;
+    }
 
-/* ════════════════════ HERO ════════════════════ */
-.hero{
-  min-height:100vh;padding-top:68px;
-  display:flex;align-items:center;
-  background:var(--white);
-  position:relative;overflow:hidden;
-}
+    /* ── SECTION COMMONS ── */
+    section {
+      padding: 96px 7%;
+    }
 
-/* subtle dot grid bg */
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle at 1px 1px,rgba(29,78,216,.055) 1px,transparent 0);
-  background-size:30px 30px;
-  pointer-events:none;
-}
-/* big blue glow */
-.hero::after{
-  content:'';position:absolute;
-  width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(29,78,216,.07) 0%,transparent 65%);
-  right:-200px;top:50%;transform:translateY(-50%);
-  pointer-events:none;
-}
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 14px;
+    }
 
-.hero-inner{
-  position:relative;z-index:2;
-  max-width:680px;
-  padding:80px 6%;
-}
+    .tag::before {
+      content: '';
+      width: 22px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--gold));
+      border-radius: 2px;
+    }
 
-.hero-badge{
-  display:inline-flex;align-items:center;gap:9px;
-  background:linear-gradient(90deg,var(--blue-soft),#fff);
-  border:1px solid var(--blue-mid);
-  border-radius:50px;padding:6px 16px;
-  font-size:.75rem;font-weight:600;color:var(--blue);
-  margin-bottom:26px;box-shadow:var(--shadow-sm);
-  animation:fadeUp .5s ease both;
-}
-.hero-badge .dot{width:7px;height:7px;background:var(--blue);border-radius:50%;animation:pulse 1.8s infinite;}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.5)}}
+    h2.sec-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.12;
+      color: var(--text);
+      margin-bottom: 14px;
+      letter-spacing: -.5px;
+    }
 
-.hero-h1{
-  font-family:'Poppins',sans-serif;
-  font-size:clamp(3rem,5.5vw,5.2rem);
-  font-weight:900;line-height:1.05;letter-spacing:-2px;
-  color:var(--text);margin-bottom:22px;
-  animation:fadeUp .6s .1s ease both;
-}
-/* gradient text on second line */
-.hero-h1 .grad{
-  background:linear-gradient(105deg,var(--blue) 0%,#3b82f6 60%,#60a5fa 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-/* gold underline decoration */
-.hero-h1 .hl{position:relative;display:inline-block;}
-.hero-h1 .hl::after{
-  content:'';position:absolute;bottom:-3px;left:0;right:0;
-  height:4px;
-  background:linear-gradient(90deg,var(--gold),#fbbf24);
-  border-radius:4px;
-}
+    p.sec-sub {
+      font-size: .97rem;
+      color: var(--text-3);
+      line-height: 1.82;
+      max-width: 520px;
+      margin-bottom: 52px;
+    }
 
-.hero-p{
-  font-size:1.05rem;color:var(--text-3);line-height:1.82;
-  max-width:480px;margin-bottom:38px;
-  animation:fadeUp .6s .2s ease both;
-}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .6s .3s ease both;}
+    /* ════════════════════ NAV ════════════════════ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      height: 68px;
+      background: rgba(255, 255, 255, .97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, .9);
+      box-shadow: 0 1px 20px rgba(15, 23, 42, .05);
+    }
 
-.btn-primary{
-  display:inline-flex;align-items:center;gap:8px;
-  background:linear-gradient(135deg,var(--blue),var(--blue-dark));
-  color:#fff;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;
-  text-decoration:none;padding:15px 30px;border-radius:50px;
-  border:none;cursor:pointer;box-shadow:var(--shadow-blue);
-  transition:transform .2s,box-shadow .2s;
-}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(29,78,216,.4);}
-.btn-secondary{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--white);color:var(--text-2);
-  font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;
-  text-decoration:none;padding:15px 30px;border-radius:50px;
-  border:1.5px solid var(--border);cursor:pointer;box-shadow:var(--shadow-sm);
-  transition:border-color .2s,color .2s,box-shadow .2s;
-}
-.btn-secondary:hover{border-color:var(--blue);color:var(--blue);box-shadow:var(--shadow);}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.hero-stats{
-  display:flex;gap:0;
-  margin-top:50px;padding-top:38px;
-  border-top:1px solid var(--border);
-  animation:fadeUp .6s .4s ease both;
-}
-.hstat{padding:0 32px 0 0;margin:0 32px 0 0;border-right:1px solid var(--border);}
-.hstat:last-child{border:none;padding:0;margin:0;}
-.hstat-n{
-  font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:900;letter-spacing:-1px;line-height:1;
-  background:linear-gradient(135deg,var(--blue),#60a5fa);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.hstat-l{font-size:.7rem;font-weight:600;color:var(--text-4);text-transform:uppercase;letter-spacing:.5px;margin-top:5px;}
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-blue);
+    }
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -.3px;
+    }
 
-/* ════════════════════ MINI-CARDS below hero ════════════════════ */
-.mini-cards{
-  background:linear-gradient(90deg,var(--blue-deep) 0%,#1e3a8a 100%);
-  padding:32px 6%;
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:16px;
-  position:relative;overflow:hidden;
-}
-.mini-cards::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.025) 1px,transparent 0);
-  background-size:28px 28px;pointer-events:none;
-}
-.mc{
-  display:flex;align-items:center;gap:14px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:14px;padding:18px 20px;
-  color:#fff;
-  backdrop-filter:blur(8px);
-  transition:background .25s,transform .25s;
-  position:relative;z-index:1;
-}
-.mc:hover{background:rgba(255,255,255,.14);transform:translateY(-2px);}
-.mc-ico{
-  width:44px;height:44px;min-width:44px;
-  background:rgba(255,255,255,.1);
-  border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
-}
-.mc-t{font-size:.87rem;font-weight:700;margin-bottom:3px;color:#fff;}
-.mc-s{font-size:.72rem;color:rgba(255,255,255,.6);}
-.mc-pill{
-  margin-left:auto;
-  background:linear-gradient(135deg,var(--gold),#fbbf24);
-  color:var(--text);font-size:.62rem;font-weight:700;
-  padding:3px 9px;border-radius:50px;white-space:nowrap;
-  box-shadow:var(--shadow-gold);
-  flex-shrink:0;
-}
+    .logo-text span {
+      color: var(--blue);
+    }
 
-/* ════════════════════ TRUST BAR ════════════════════ */
-.trust-bar{
-  background:var(--blue-soft);
-  border-top:1px solid var(--blue-mid);
-  border-bottom:1px solid var(--blue-mid);
-  padding:18px 6%;
-  display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:12px;
-}
-.ti{display:flex;align-items:center;gap:9px;color:var(--blue);font-size:.82rem;font-weight:600;}
-.ti-ico{
-  width:30px;height:30px;
-  background:rgba(29,78,216,.1);border-radius:8px;
-  display:flex;align-items:center;justify-content:center;
-}
-.tsep{width:1px;height:24px;background:var(--blue-mid);}
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
 
-/* ════════════════════ SERVICIOS ════════════════════ */
-#servicios{background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);position:relative;overflow:hidden;}
-#servicios::before{
-  content:'';position:absolute;
-  width:500px;height:500px;border-radius:50%;
-  background:radial-gradient(circle,rgba(29,78,216,.04) 0%,transparent 70%);
-  top:-120px;right:-80px;pointer-events:none;
-}
-.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.scard{
-  background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);
-  padding:36px 30px 32px;position:relative;overflow:hidden;
-  box-shadow:var(--shadow-sm);
-  transition:transform .3s,box-shadow .3s,border-color .3s;cursor:default;
-}
-.scard::after{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--blue),#60a5fa,var(--gold));
-  opacity:0;transition:opacity .3s;
-}
-.scard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent;}
-.scard:hover::after{opacity:1;}
-.scard-wm{
-  position:absolute;bottom:-10px;right:14px;
-  font-size:4.5rem;font-weight:900;
-  color:rgba(29,78,216,.05);line-height:1;
-  pointer-events:none;user-select:none;
-}
-.scard-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
-.scard-ico-wrap{
-  width:50px;height:50px;min-width:50px;
-  background:var(--blue-soft);
-  border-radius:12px;
-  display:flex;align-items:center;justify-content:center;
-}
-.scard-num-lbl{font-size:.67rem;font-weight:700;color:var(--text-4);letter-spacing:1px;}
-.scard-name{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:10px;}
-.scard-desc{font-size:.86rem;color:var(--text-3);line-height:1.75;}
-.scard-footer{display:flex;align-items:center;gap:8px;margin-top:20px;padding-top:18px;border-top:1px solid var(--border);}
-.scard-tag{font-size:.68rem;font-weight:600;color:var(--blue);background:var(--blue-soft);padding:4px 10px;border-radius:50px;}
-.scard-arrow{
-  margin-left:auto;width:28px;height:28px;
-  background:var(--blue-soft);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:.82rem;
-  transition:background .2s,transform .2s;
-}
-.scard:hover .scard-arrow{background:var(--blue);color:#fff;transform:translateX(2px);}
+    .nav-links a {
+      font-size: .84rem;
+      font-weight: 500;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color .2s;
+    }
 
-/* ════════════════════ QUIÉNES ════════════════════ */
-#quienes{background:var(--white);position:relative;overflow:hidden;}
-#quienes::after{
-  content:'';position:absolute;
-  width:600px;height:600px;border-radius:50%;
-  background:radial-gradient(circle,rgba(245,158,11,.04) 0%,transparent 70%);
-  bottom:-200px;left:-100px;pointer-events:none;
-}
-.qwrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.qpillar{
-  display:flex;align-items:flex-start;gap:16px;
-  margin-bottom:24px;padding:18px;border-radius:14px;
-  transition:background .25s,box-shadow .25s;
-}
-.qpillar:last-child{margin-bottom:0;}
-.qpillar:hover{background:var(--bg);box-shadow:var(--shadow);}
-.qpillar-ico{
-  width:48px;height:48px;min-width:48px;border-radius:12px;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-}
-.qpillar-ico.blue{background:linear-gradient(135deg,var(--blue-soft),#dbeafe);}
-.qpillar-ico.gold{background:linear-gradient(135deg,var(--gold-light),#fde68a);}
-.qpillar-title{font-family:'Poppins',sans-serif;font-size:.93rem;font-weight:700;color:var(--text);margin-bottom:5px;}
-.qpillar-text{font-size:.85rem;color:var(--text-3);line-height:1.72;}
+    .nav-links a:hover {
+      color: var(--blue);
+    }
 
-.qcard{
-  background:linear-gradient(145deg,var(--blue-deep) 0%,#1e3a8a 60%,#1d4ed8 100%);
-  border-radius:24px;padding:48px 40px;color:#fff;
-  position:relative;overflow:hidden;
-  box-shadow:0 24px 64px rgba(15,23,42,.3);
-}
-.qcard::before{content:'';position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.07),transparent 70%);top:-80px;right:-80px;}
-.qcard::after{content:'';position:absolute;width:200px;height:200px;border-radius:50%;border:1px solid rgba(255,255,255,.06);bottom:-50px;left:-30px;}
-.qcard-label{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
-.qcard-quote{font-family:'Poppins',sans-serif;font-size:1.12rem;font-weight:600;line-height:1.65;color:rgba(255,255,255,.95);margin-bottom:36px;position:relative;z-index:1;}
-.qcard-quote::before{content:'"';font-size:4rem;font-weight:900;color:rgba(255,255,255,.08);line-height:0;position:absolute;top:10px;left:-8px;}
-.qcard-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:1;}
-.qstat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;backdrop-filter:blur(6px);}
-.qstat-n{font-family:'Poppins',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:-.5px;color:var(--gold);line-height:1;}
-.qstat-l{font-size:.67rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.5px;margin-top:5px;font-weight:500;}
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: .82rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-blue);
+      transition: transform .2s, box-shadow .2s;
+    }
 
-/* ════════════════════ PROCESO ════════════════════ */
-#proceso{
-  background:linear-gradient(160deg,#eff6ff 0%,#f8fafc 60%,#fff 100%);
-  position:relative;overflow:hidden;
-}
-#proceso::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle at 1px 1px,rgba(29,78,216,.055) 1px,transparent 0);
-  background-size:32px 32px;pointer-events:none;
-}
-.proc-header{text-align:center;margin-bottom:68px;}
-.proc-header .sec-sub{margin:0 auto;text-align:center;}
-.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
-.steps-row::before{
-  content:'';position:absolute;
-  top:44px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);
-  height:2px;
-  background:linear-gradient(90deg,var(--blue-mid),var(--gold));z-index:0;
-}
-.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 20px;position:relative;z-index:1;}
-.step-circle{
-  width:88px;height:88px;
-  background:var(--white);border:2px solid var(--border);border-radius:50%;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  margin-bottom:24px;box-shadow:var(--shadow);transition:all .3s;
-}
-.step-circle .snum{font-size:.6rem;font-weight:700;color:var(--text-4);letter-spacing:1px;margin-top:2px;}
-.step:hover .step-circle{background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-color:transparent;box-shadow:var(--shadow-blue);transform:scale(1.08);}
-.step:hover .step-circle svg{stroke:#fff;}
-.step:hover .step-circle .snum{color:rgba(255,255,255,.65);}
-.step-title{font-family:'Poppins',sans-serif;font-size:.93rem;font-weight:700;color:var(--text);margin-bottom:8px;}
-.step-desc{font-size:.82rem;color:var(--text-3);line-height:1.72;}
+    .btn-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(29, 78, 216, .35);
+    }
 
-/* ════════════════════ CONTACTO ════════════════════ */
-#contacto{background:var(--white);}
-.cwrap{display:grid;grid-template-columns:5fr 7fr;gap:60px;align-items:start;}
-.cinfo-title{font-family:'Poppins',sans-serif;font-size:1.65rem;font-weight:800;color:var(--text);line-height:1.25;margin-bottom:12px;letter-spacing:-.4px;}
-.cinfo-sub{font-size:.92rem;color:var(--text-3);line-height:1.75;margin-bottom:36px;}
-.citem{display:flex;align-items:flex-start;gap:16px;margin-bottom:22px;}
-.citem-ico{
-  width:46px;height:46px;min-width:46px;
-  background:var(--blue-soft);border-radius:12px;
-  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);
-}
-.citem-lbl{font-size:.67rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue);margin-bottom:4px;}
-.citem-val{font-size:.92rem;color:var(--text);line-height:1.55;}
+    /* ════════════════════ HERO ════════════════════ */
+    .hero {
+      min-height: 100vh;
+      padding-top: 68px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.268), rgba(15, 23, 42, 0.95)), url('hero.webp') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
 
-.fcard{
-  background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);
-  padding:44px 40px;box-shadow:var(--shadow-md);position:relative;overflow:hidden;
-}
-.fcard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),#60a5fa,var(--gold));}
-.fcard h3{font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:6px;}
-.fcard p{font-size:.82rem;color:var(--text-3);margin-bottom:28px;}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
-.fg label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-3);}
-.fg input,.fg select,.fg textarea{
-  background:var(--bg);border:1.5px solid var(--border);
-  color:var(--text);font-family:'Poppins',sans-serif;font-size:.88rem;
-  padding:12px 14px;border-radius:10px;outline:none;
-  transition:border-color .2s,box-shadow .2s,background .2s;resize:vertical;
-}
-.fg input::placeholder,.fg textarea::placeholder{color:var(--text-4);}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);background:var(--white);box-shadow:0 0 0 4px rgba(29,78,216,.1);}
+    /* subtle dot grid bg */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(29, 78, 216, .055) 1px, transparent 0);
+      background-size: 30px 30px;
+      pointer-events: none;
+    }
 
-/* ════════════════════ CTA FINAL ════════════════════ */
-#cta-final{
-  padding:0;
-  background:linear-gradient(135deg,var(--blue-deep) 0%,#1e3a8a 50%,#1d4ed8 100%);
-  position:relative;overflow:hidden;
-}
-#cta-final::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.03) 1px,transparent 0);
-  background-size:28px 28px;
-}
-#cta-final::after{
-  content:'';position:absolute;
-  width:600px;height:600px;border-radius:50%;
-  background:radial-gradient(circle,rgba(245,158,11,.08),transparent 70%);
-  top:-200px;right:-100px;pointer-events:none;
-}
-.cta-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:400px;position:relative;z-index:1;}
-.cta-l{padding:72px 6%;display:flex;flex-direction:column;justify-content:center;}
-.cta-h{font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:14px;letter-spacing:-.5px;}
-.cta-h strong{background:linear-gradient(90deg,var(--gold),#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.cta-p{font-size:.97rem;color:rgba(255,255,255,.72);line-height:1.78;margin-bottom:38px;}
-.cta-btns{display:flex;gap:14px;flex-wrap:wrap;}
-.btn-gold{
-  display:inline-flex;align-items:center;gap:8px;
-  background:linear-gradient(135deg,var(--gold),#f59e0b);color:var(--text);
-  font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:700;
-  text-decoration:none;padding:15px 30px;border-radius:50px;
-  border:none;cursor:pointer;box-shadow:var(--shadow-gold);
-  transition:transform .2s,box-shadow .2s;
-}
-.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(245,158,11,.45);}
-.btn-outline-w{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,.1);color:#fff;
-  font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:600;
-  text-decoration:none;padding:15px 30px;border-radius:50px;
-  border:1.5px solid rgba(255,255,255,.25);cursor:pointer;
-  backdrop-filter:blur(8px);transition:background .2s,border-color .2s;
-}
-.btn-outline-w:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5);}
-.cta-r{padding:60px 6%;display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(255,255,255,.08);}
-.cta-features{display:flex;flex-direction:column;gap:14px;width:100%;max-width:320px;}
-.cf{
-  display:flex;align-items:center;gap:16px;
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
-  border-radius:14px;padding:18px 20px;color:#fff;
-  backdrop-filter:blur(8px);transition:background .25s;
-}
-.cf:hover{background:rgba(255,255,255,.12);}
-.cf-ico{width:40px;height:40px;min-width:40px;background:rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;}
-.cf-text{font-size:.85rem;font-weight:500;color:rgba(255,255,255,.9);line-height:1.4;}
+    /* big blue glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29, 78, 216, .07) 0%, transparent 65%);
+      right: -200px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
 
-/* ════════════════════ FOOTER ════════════════════ */
-footer{
-  background:var(--blue-deep);
-  padding:36px 6%;
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:20px;
-  border-top:1px solid rgba(255,255,255,.05);
-}
-.f-logo{display:flex;align-items:center;gap:9px;}
-.f-logo-mark{width:30px;height:30px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:7px;display:flex;align-items:center;justify-content:center;}
-.f-logo-text{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:800;color:#fff;}
-.f-logo-text span{color:var(--gold);}
-.f-copy{font-size:.75rem;color:#334155;}
-.f-links{display:flex;gap:20px;}
-.f-links a{font-size:.75rem;color:#334155;text-decoration:none;transition:color .2s;font-weight:500;}
-.f-links a:hover{color:var(--gold);}
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      padding: 80px 6%;
+    }
 
-/* ════════════════════ RESPONSIVE ════════════════════ */
-@media(max-width:960px){
-  .mini-cards{grid-template-columns:1fr 1fr;}
-  .qwrap,.cwrap,.cta-grid{grid-template-columns:1fr;}
-  .steps-row{grid-template-columns:1fr 1fr;gap:40px;}
-  .steps-row::before{display:none;}
-  .sgrid{grid-template-columns:1fr;}
-  .nav-links{display:none;}
-  .cta-r{border-left:none;border-top:1px solid rgba(255,255,255,.08);}
-  .frow{grid-template-columns:1fr;}
-}
-@media(max-width:600px){
-  .mini-cards{grid-template-columns:1fr;}
-  .hero-h1{letter-spacing:-1px;}
-}
-</style>
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: .75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 26px;
+      box-shadow: var(--shadow-sm);
+      animation: fadeUp .5s ease both;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      background: #38bdf8;
+      border-radius: 50%;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .3;
+        transform: scale(1.5)
+      }
+    }
+
+    .hero-h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(3rem, 5.5vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: #ffffff;
+      margin-bottom: 22px;
+      animation: fadeUp .6s .1s ease both;
+    }
+
+    /* gradient text on second line */
+    .hero-h1 .grad {
+      background: linear-gradient(105deg, var(--blue) 0%, #3b82f6 60%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* gold underline decoration */
+    .hero-h1 .hl {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-h1 .hl::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), #fbbf24);
+      border-radius: 4px;
+    }
+
+    .hero-p {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.82;
+      max-width: 480px;
+      margin-bottom: 38px;
+      animation: fadeUp .6s .2s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeUp .6s .3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-blue);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(29, 78, 216, .4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      margin-top: 50px;
+      padding-top: 38px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      animation: fadeUp .6s .4s ease both;
+    }
+
+    .hstat {
+      padding: 0 32px 0 0;
+      margin: 0 32px 0 0;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hstat:last-child {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hstat-n {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1;
+      background: linear-gradient(135deg, #60a5fa, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hstat-l {
+      font-size: .7rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-top: 5px;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ════════════════════ MINI-CARDS below hero ════════════════════ */
+    .mini-cards {
+      background: linear-gradient(90deg, var(--blue-deep) 0%, #1e3a8a 100%);
+      padding: 32px 6%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mini-cards::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .025) 1px, transparent 0);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .mc {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 14px;
+      padding: 18px 20px;
+      color: #fff;
+      backdrop-filter: blur(8px);
+      transition: background .25s, transform .25s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mc:hover {
+      background: rgba(255, 255, 255, .14);
+      transform: translateY(-2px);
+    }
+
+    .mc-ico {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background: rgba(255, 255, 255, .1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mc-t {
+      font-size: .87rem;
+      font-weight: 700;
+      margin-bottom: 3px;
+      color: #fff;
+    }
+
+    .mc-s {
+      font-size: .72rem;
+      color: rgba(255, 255, 255, .6);
+    }
+
+    .mc-pill {
+      margin-left: auto;
+      background: linear-gradient(135deg, var(--gold), #fbbf24);
+      color: var(--text);
+      font-size: .62rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 50px;
+      white-space: nowrap;
+      box-shadow: var(--shadow-gold);
+      flex-shrink: 0;
+    }
+
+    /* ════════════════════ TRUST BAR ════════════════════ */
+    .trust-bar {
+      background: var(--blue-soft);
+      border-top: 1px solid var(--blue-mid);
+      border-bottom: 1px solid var(--blue-mid);
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .ti {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--blue);
+      font-size: .82rem;
+      font-weight: 600;
+    }
+
+    .ti-ico {
+      width: 30px;
+      height: 30px;
+      background: rgba(29, 78, 216, .1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tsep {
+      width: 1px;
+      height: 24px;
+      background: var(--blue-mid);
+    }
+
+    /* ════════════════════ SERVICIOS ════════════════════ */
+    #servicios {
+      background: linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #servicios::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(29, 78, 216, .04) 0%, transparent 70%);
+      top: -120px;
+      right: -80px;
+      pointer-events: none;
+    }
+
+    .sgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .scard {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 36px 30px 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+      cursor: default;
+    }
+
+    .scard::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), #60a5fa, var(--gold));
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .scard:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+
+    .scard:hover::after {
+      opacity: 1;
+    }
+
+    .scard-wm {
+      position: absolute;
+      bottom: -10px;
+      right: 14px;
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: rgba(29, 78, 216, .05);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .scard-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .scard-ico-wrap {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      background: var(--blue-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scard-num-lbl {
+      font-size: .67rem;
+      font-weight: 700;
+      color: var(--text-4);
+      letter-spacing: 1px;
+    }
+
+    .scard-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .scard-desc {
+      font-size: .86rem;
+      color: var(--text-3);
+      line-height: 1.75;
+    }
+
+    .scard-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .scard-tag {
+      font-size: .68rem;
+      font-weight: 600;
+      color: var(--blue);
+      background: var(--blue-soft);
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+
+    .scard-arrow {
+      margin-left: auto;
+      width: 28px;
+      height: 28px;
+      background: var(--blue-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: .82rem;
+      transition: background .2s, transform .2s;
+    }
+
+    .scard:hover .scard-arrow {
+      background: var(--blue);
+      color: #fff;
+      transform: translateX(2px);
+    }
+
+    /* ════════════════════ QUIÉNES ════════════════════ */
+    #quienes {
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #quienes::after {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 158, 11, .04) 0%, transparent 70%);
+      bottom: -200px;
+      left: -100px;
+      pointer-events: none;
+    }
+
+    .qwrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .qpillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding: 18px;
+      border-radius: 14px;
+      transition: background .25s, box-shadow .25s;
+    }
+
+    .qpillar:last-child {
+      margin-bottom: 0;
+    }
+
+    .qpillar:hover {
+      background: var(--bg);
+      box-shadow: var(--shadow);
+    }
+
+    .qpillar-ico {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .qpillar-ico.blue {
+      background: linear-gradient(135deg, var(--blue-soft), #dbeafe);
+    }
+
+    .qpillar-ico.gold {
+      background: linear-gradient(135deg, var(--gold-light), #fde68a);
+    }
+
+    .qpillar-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .qpillar-text {
+      font-size: .85rem;
+      color: var(--text-3);
+      line-height: 1.72;
+    }
+
+    .qcard {
+      background: linear-gradient(145deg, var(--blue-deep) 0%, #1e3a8a 60%, #1d4ed8 100%);
+      border-radius: 24px;
+      padding: 48px 40px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(15, 23, 42, .3);
+    }
+
+    .qcard::before {
+      content: '';
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, .07), transparent 70%);
+      top: -80px;
+      right: -80px;
+    }
+
+    .qcard::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .06);
+      bottom: -50px;
+      left: -30px;
+    }
+
+    .qcard-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .qcard-quote {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.12rem;
+      font-weight: 600;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, .95);
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .qcard-quote::before {
+      content: '"';
+      font-size: 4rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, .08);
+      line-height: 0;
+      position: absolute;
+      top: 10px;
+      left: -8px;
+    }
+
+    .qcard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .qstat {
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 14px;
+      padding: 18px 16px;
+      backdrop-filter: blur(6px);
+    }
+
+    .qstat-n {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: -.5px;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .qstat-l {
+      font-size: .67rem;
+      color: rgba(255, 255, 255, .55);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    /* ════════════════════ PROCESO ════════════════════ */
+    #proceso {
+      background: linear-gradient(160deg, #eff6ff 0%, #f8fafc 60%, #fff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #proceso::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(29, 78, 216, .055) 1px, transparent 0);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    .proc-header {
+      text-align: center;
+      margin-bottom: 68px;
+    }
+
+    .proc-header .sec-sub {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .steps-row::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: calc(12.5% + 20px);
+      right: calc(12.5% + 20px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue-mid), var(--gold));
+      z-index: 0;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-circle {
+      width: 88px;
+      height: 88px;
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      transition: all .3s;
+    }
+
+    .step-circle .snum {
+      font-size: .6rem;
+      font-weight: 700;
+      color: var(--text-4);
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    .step:hover .step-circle {
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      border-color: transparent;
+      box-shadow: var(--shadow-blue);
+      transform: scale(1.08);
+    }
+
+    .step:hover .step-circle svg {
+      stroke: #fff;
+    }
+
+    .step:hover .step-circle .snum {
+      color: rgba(255, 255, 255, .65);
+    }
+
+    .step-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .step-desc {
+      font-size: .82rem;
+      color: var(--text-3);
+      line-height: 1.72;
+    }
+
+    /* ════════════════════ CONTACTO ════════════════════ */
+    #contacto {
+      background: var(--white);
+    }
+
+    .cwrap {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .cinfo-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 12px;
+      letter-spacing: -.4px;
+    }
+
+    .cinfo-sub {
+      font-size: .92rem;
+      color: var(--text-3);
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    .citem {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .citem-ico {
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      background: var(--blue-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .citem-lbl {
+      font-size: .67rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    .citem-val {
+      font-size: .92rem;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .fcard {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 44px 40px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fcard::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue), #60a5fa, var(--gold));
+    }
+
+    .fcard h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .fcard p {
+      font-size: .82rem;
+      color: var(--text-3);
+      margin-bottom: 28px;
+    }
+
+    .frow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .fg {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .fg label {
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--text-3);
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      font-size: .88rem;
+      padding: 12px 14px;
+      border-radius: 10px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+      resize: vertical;
+    }
+
+    .fg input::placeholder,
+    .fg textarea::placeholder {
+      color: var(--text-4);
+    }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      border-color: var(--blue);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(29, 78, 216, .1);
+    }
+
+    /* ════════════════════ CTA FINAL ════════════════════ */
+    #cta-final {
+      padding: 0;
+      background: linear-gradient(135deg, var(--blue-deep) 0%, #1e3a8a 50%, #1d4ed8 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .03) 1px, transparent 0);
+      background-size: 28px 28px;
+    }
+
+    #cta-final::after {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 158, 11, .08), transparent 70%);
+      top: -200px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      min-height: 400px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-l {
+      padding: 72px 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cta-h {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      letter-spacing: -.5px;
+    }
+
+    .cta-h strong {
+      background: linear-gradient(90deg, var(--gold), #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cta-p {
+      font-size: .97rem;
+      color: rgba(255, 255, 255, .72);
+      line-height: 1.78;
+      margin-bottom: 38px;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--gold), #f59e0b);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-gold);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(245, 158, 11, .45);
+    }
+
+    .btn-outline-w {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .1);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      border: 1.5px solid rgba(255, 255, 255, .25);
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background .2s, border-color .2s;
+    }
+
+    .btn-outline-w:hover {
+      background: rgba(255, 255, 255, .18);
+      border-color: rgba(255, 255, 255, .5);
+    }
+
+    .cta-r {
+      padding: 60px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .cta-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .cf {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 14px;
+      padding: 18px 20px;
+      color: #fff;
+      backdrop-filter: blur(8px);
+      transition: background .25s;
+    }
+
+    .cf:hover {
+      background: rgba(255, 255, 255, .12);
+    }
+
+    .cf-ico {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: rgba(255, 255, 255, .1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cf-text {
+      font-size: .85rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, .9);
+      line-height: 1.4;
+    }
+
+    /* ════════════════════ FOOTER ════════════════════ */
+    footer {
+      background: var(--blue-deep);
+      padding: 36px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .05);
+    }
+
+    .f-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .f-logo-mark {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .f-logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .f-logo-text span {
+      color: var(--gold);
+    }
+
+    .f-copy {
+      font-size: .75rem;
+      color: #334155;
+    }
+
+    .f-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .f-links a {
+      font-size: .75rem;
+      color: #334155;
+      text-decoration: none;
+      transition: color .2s;
+      font-weight: 500;
+    }
+
+    .f-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ════════════════════ RESPONSIVE ════════════════════ */
+    @media(max-width:960px) {
+      .mini-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .qwrap,
+      .cwrap,
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .steps-row::before {
+        display: none;
+      }
+
+      .sgrid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .cta-r {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, .08);
+      }
+
+      .frow {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:600px) {
+      .mini-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-h1 {
+        letter-spacing: -1px;
+      }
+    }
+
+    /* ════════════════════ SCROLL ANIMATIONS ════════════════════ */
+    .scroll-sec {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: opacity, transform;
+    }
+
+    .scroll-sec.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media(prefers-reduced-motion: reduce) {
+      .scroll-sec {
+        transition: none;
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">
-    <div class="logo-mark">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <div class="logo-mark">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13" rx="1" />
+          <path d="M16 8h4l3 5v4h-7V8z" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
+        </svg>
+      </div>
+      <div class="logo-text">Fletes <span>y</span> Mudanzas</div>
     </div>
-    <div class="logo-text">Fletes <span>Rubén</span></div>
-  </div>
-  <div class="nav-links">
-    <a href="#servicios">Servicios</a>
-    <a href="#quienes">Nosotros</a>
-    <a href="#proceso">Cómo funciona</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-  <a href="https://wa.me/54911XXXXXXXX" class="btn-nav">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    Escribinos
-  </a>
-</nav>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#quienes">Nosotros</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <a href="https://wa.me/54911XXXXXXXX" class="btn-nav">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+      Escribinos
+    </a>
+  </nav>
 
-<!-- HERO -->
-<section class="hero" id="inicio">
-  <div class="hero-inner">
-    <div class="hero-badge">
-      <span class="dot"></span>
-      Atendemos 24 hs · Todos los días
-    </div>
-    <h1 class="hero-h1">
-      Tu mudanza,<br>
-      <span style="color:#38bdf8;-webkit-text-fill-color:#38bdf8;"><span class="hl">en buenas</span></span> <span style="color:var(--text);-webkit-text-fill-color:var(--text);">manos</span>
-    </h1>
-    <p class="hero-p">Más de 10 años realizando mudanzas y fletes en CABA, Gran Buenos Aires e interior del país. Personal capacitado, flota propia y presupuesto sin cargo.</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/54911XXXXXXXX?text=Hola%20Rubén%2C%20necesito%20un%20presupuesto" class="btn-primary">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Presupuesto Gratis
-      </a>
-      <a href="#servicios" class="btn-secondary">Ver servicios →</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat"><div class="hstat-n">+10</div><div class="hstat-l">Años de exp.</div></div>
-      <div class="hstat"><div class="hstat-n">24 hs</div><div class="hstat-l">Disponibles</div></div>
-      <div class="hstat"><div class="hstat-n">100%</div><div class="hstat-l">Compromiso</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- MINI CARDS (below hero, replaced the hero-right panel) -->
-<div class="mini-cards">
-  <div class="mc">
-    <div class="mc-ico">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    </div>
-    <div><div class="mc-t">Mudanzas Familiares</div><div class="mc-s">CABA y Gran Buenos Aires</div></div>
-    <span class="mc-pill">24 hs</span>
-  </div>
-  <div class="mc">
-    <div class="mc-ico">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-    </div>
-    <div><div class="mc-t">Mudanzas Empresariales</div><div class="mc-s">Oficinas y depósitos</div></div>
-    <span class="mc-pill">Profesional</span>
-  </div>
-  <div class="mc">
-    <div class="mc-ico">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-    </div>
-    <div><div class="mc-t">Interior del País</div><div class="mc-s">Todas las provincias</div></div>
-    <span class="mc-pill">Nacional</span>
-  </div>
-  <div class="mc">
-    <div class="mc-ico">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    </div>
-    <div><div class="mc-t">Desalojos Judiciales</div><div class="mc-s">Depositario judicial</div></div>
-    <span class="mc-pill">Esp.</span>
-  </div>
-</div>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="ti">
-    <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-    Personal capacitado
-  </div>
-  <div class="tsep"></div>
-  <div class="ti">
-    <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-    Flota propia
-  </div>
-  <div class="tsep"></div>
-  <div class="ti">
-    <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-    Atención 24 hs
-  </div>
-  <div class="tsep"></div>
-  <div class="ti">
-    <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-    CABA, GBA e interior
-  </div>
-  <div class="tsep"></div>
-  <div class="ti">
-    <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-    Presupuesto sin cargo
-  </div>
-</div>
-
-<!-- SERVICIOS -->
-<section id="servicios">
-  <div class="tag">Lo que hacemos</div>
-  <h2 class="sec-title">Nuestros Servicios</h2>
-  <p class="sec-sub">Soluciones integrales para cada tipo de mudanza o flete, sin restricción horaria y con personal especializado.</p>
-  <div class="sgrid">
-
-    <div class="scard">
-      <div class="scard-wm">01</div>
-      <div class="scard-head">
-        <div class="scard-ico-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="scard-num-lbl">Servicio 01</div>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Atendemos 24 hs · Todos los días
       </div>
-      <div class="scard-name">Mudanzas Familiares y Empresariales</div>
-      <div class="scard-desc">Todos los días, las 24 hs. Personal capacitado para movimientos por escalera y/o ascensor, sin riesgo alguno para tus pertenencias.</div>
-      <div class="scard-footer">
-        <span class="scard-tag">24 hs · Todos los días</span>
-        <div class="scard-arrow">→</div>
-      </div>
-    </div>
-
-    <div class="scard">
-      <div class="scard-wm">02</div>
-      <div class="scard-head">
-        <div class="scard-ico-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="scard-num-lbl">Servicio 02</div>
-      </div>
-      <div class="scard-name">Personal de Carga y Descarga</div>
-      <div class="scard-desc">Equipo especializado para el manejo seguro de muebles, electrodomésticos y objetos de valor. Cuidamos cada detalle.</div>
-      <div class="scard-footer">
-        <span class="scard-tag">Profesional</span>
-        <div class="scard-arrow">→</div>
-      </div>
-    </div>
-
-    <div class="scard">
-      <div class="scard-wm">03</div>
-      <div class="scard-head">
-        <div class="scard-ico-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-        </div>
-        <div class="scard-num-lbl">Servicio 03</div>
-      </div>
-      <div class="scard-name">Mudanzas al Interior del País</div>
-      <div class="scard-desc">Llegamos a todas las provincias. Realizamos fletes y mudanzas a la costa y cualquier destino del interior. Consultanos.</div>
-      <div class="scard-footer">
-        <span class="scard-tag">Todo el país</span>
-        <div class="scard-arrow">→</div>
-      </div>
-    </div>
-
-    <div class="scard">
-      <div class="scard-wm">04</div>
-      <div class="scard-head">
-        <div class="scard-ico-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <div class="scard-num-lbl">Servicio 04</div>
-      </div>
-      <div class="scard-name">Mini Fletes y Repartos</div>
-      <div class="scard-desc">Amplia disponibilidad horaria. Repartos a emprendedores y empresas. Fletes a la costa e interior del país. Consultanos sin compromiso.</div>
-      <div class="scard-footer">
-        <span class="scard-tag">Emprendedores · Empresas</span>
-        <div class="scard-arrow">→</div>
-      </div>
-    </div>
-
-    <div class="scard">
-      <div class="scard-wm">05</div>
-      <div class="scard-head">
-        <div class="scard-ico-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M8 12s0-4 4-4 4 4 4 4-0 4-4 4-4-4-4-4z" stroke-dasharray="2 2"/></svg>
-        </div>
-        <div class="scard-num-lbl">Servicio 05</div>
-      </div>
-      <div class="scard-name">Trabajos con Soga</div>
-      <div class="scard-desc">Cuando escalera o ascensor no son una opción, contamos con el equipo y la experiencia para realizar el trabajo de forma segura.</div>
-      <div class="scard-footer">
-        <span class="scard-tag">Especializado</span>
-        <div class="scard-arrow">→</div>
-      </div>
-    </div>
-
-    <div class="scard">
-      <div class="scard-wm">06</div>
-      <div class="scard-head">
-        <div class="scard-ico-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <div class="scard-num-lbl">Servicio 06</div>
-      </div>
-      <div class="scard-name">Desalojos Judiciales</div>
-      <div class="scard-desc">Flota completa, más de 10 años de experiencia. Hacemos depositario judicial con toda la documentación requerida por ley.</div>
-      <div class="scard-footer">
-        <span class="scard-tag">Depositario judicial</span>
-        <div class="scard-arrow">→</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- QUIÉNES SOMOS -->
-<section id="quienes">
-  <div class="qwrap">
-    <div>
-      <div class="tag">Quiénes somos</div>
-      <h2 class="sec-title">Más de una década cuidando lo que más importa</h2>
-      <p class="sec-sub" style="margin-bottom:36px;">Una empresa con historia, presente en cada mudanza desde el primer mueble hasta el último.</p>
-
-      <div class="qpillar">
-        <div class="qpillar-ico blue">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <div>
-          <div class="qpillar-title">+10 años de experiencia comprobada</div>
-          <div class="qpillar-text">Trayectoria sólida en miles de mudanzas de todo tipo y tamaño en Buenos Aires y el interior.</div>
-        </div>
-      </div>
-
-      <div class="qpillar">
-        <div class="qpillar-ico gold">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div>
-          <div class="qpillar-title">Responsabilidad en cada trabajo</div>
-          <div class="qpillar-text">Nos comprometemos con el mismo nivel de cuidado sin importar el tamaño del servicio.</div>
-        </div>
-      </div>
-
-      <div class="qpillar">
-        <div class="qpillar-ico blue">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <div>
-          <div class="qpillar-title">Flota y personal propios</div>
-          <div class="qpillar-text">Vehículos adecuados y personal capacitado para cada tipo de mudanza o flete.</div>
-        </div>
-      </div>
-
-      <div class="qpillar">
-        <div class="qpillar-ico gold">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div>
-          <div class="qpillar-title">Soluciones rápidas y sin estrés</div>
-          <div class="qpillar-text">Nos adaptamos a tus tiempos para que tu mudanza sea simple, segura y sin sorpresas.</div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="qcard">
-        <div class="qcard-label">Nuestra promesa</div>
-        <div class="qcard-quote">Cada mudanza es única. Tratamos tus pertenencias con el mismo cuidado que si fueran las nuestras.</div>
-        <div class="qcard-grid">
-          <div class="qstat"><div class="qstat-n">CABA</div><div class="qstat-l">Ciudad de Bs. As.</div></div>
-          <div class="qstat"><div class="qstat-n">GBA</div><div class="qstat-l">Gran Buenos Aires</div></div>
-          <div class="qstat"><div class="qstat-n">24 hs</div><div class="qstat-l">Disponibilidad</div></div>
-          <div class="qstat"><div class="qstat-n">Todo</div><div class="qstat-l">El interior del país</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESO -->
-<section id="proceso">
-  <div class="proc-header">
-    <div class="tag" style="justify-content:center;">Cómo funciona</div>
-    <h2 class="sec-title">Tu mudanza en 4 pasos simples</h2>
-    <p class="sec-sub">Sin complicaciones, sin sorpresas. Así de fácil es trabajar con nosotros.</p>
-  </div>
-  <div class="steps-row">
-    <div class="step">
-      <div class="step-circle">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <span class="snum">PASO 1</span>
-      </div>
-      <div class="step-title">Nos contactás</div>
-      <div class="step-desc">Por WhatsApp, teléfono o formulario. Respondemos en minutos.</div>
-    </div>
-    <div class="step">
-      <div class="step-circle">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        <span class="snum">PASO 2</span>
-      </div>
-      <div class="step-title">Recibís presupuesto</div>
-      <div class="step-desc">Sin cargo, claro y detallado. Sin letras chicas ni sorpresas.</div>
-    </div>
-    <div class="step">
-      <div class="step-circle">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        <span class="snum">PASO 3</span>
-      </div>
-      <div class="step-title">Elegís fecha y hora</div>
-      <div class="step-desc">Coordinamos el día y horario que más te convenga. Somos flexibles.</div>
-    </div>
-    <div class="step">
-      <div class="step-circle">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        <span class="snum">PASO 4</span>
-      </div>
-      <div class="step-title">¡Listo!</div>
-      <div class="step-desc">Realizamos la mudanza con profesionalismo, cuidado y puntualidad.</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto">
-  <div class="tag">Contacto</div>
-  <h2 class="sec-title">Hablemos sin compromiso</h2>
-  <p class="sec-sub">Atendemos todos los días. Presupuesto rápido y sin cargo.</p>
-  <div class="cwrap">
-    <div>
-      <div class="cinfo-title">Estamos para ayudarte cuando lo necesitás</div>
-      <div class="cinfo-sub">Contactanos por el medio que prefieras. Respondemos a la brevedad.</div>
-      <div class="citem">
-        <div class="citem-ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div><div class="citem-lbl">Teléfono / WhatsApp</div><div class="citem-val">Consultanos directamente<br><small style="color:var(--text-4);">Respondemos a la brevedad</small></div></div>
-      </div>
-      <div class="citem">
-        <div class="citem-ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div><div class="citem-lbl">Horario</div><div class="citem-val">Todos los días, las 24 hs</div></div>
-      </div>
-      <div class="citem">
-        <div class="citem-ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div><div class="citem-lbl">Zona de cobertura</div><div class="citem-val">CABA, Gran Buenos Aires<br>e interior del país</div></div>
-      </div>
-      <a href="https://wa.me/54911XXXXXXXX?text=Hola%20Rubén%2C%20quiero%20un%20presupuesto" class="btn-primary" style="margin-top:14px;display:inline-flex;">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Enviar WhatsApp
-      </a>
-    </div>
-    <div class="fcard">
-      <h3>Solicitar presupuesto</h3>
-      <p>Completá el formulario y te contactamos a la brevedad.</p>
-      <div class="frow">
-        <div class="fg"><label>Nombre</label><input type="text" placeholder="Tu nombre completo"></div>
-        <div class="fg"><label>Teléfono</label><input type="tel" placeholder="Tu número"></div>
-      </div>
-      <div class="fg">
-        <label>Servicio</label>
-        <select>
-          <option value="">Seleccioná un servicio...</option>
-          <option>Mudanza familiar</option>
-          <option>Mudanza empresarial</option>
-          <option>Mudanza al interior</option>
-          <option>Mini flete / Reparto</option>
-          <option>Trabajo con soga</option>
-          <option>Desalojo judicial</option>
-          <option>Otro</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label>Detalle</label>
-        <textarea rows="4" placeholder="Origen, destino, tipo de elementos, fecha aproximada..."></textarea>
-      </div>
-      <button class="btn-primary" style="width:100%;justify-content:center;border-radius:10px;" onclick="alert('¡Gracias! Nos comunicaremos a la brevedad.')">Enviar solicitud →</button>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section id="cta-final">
-  <div class="cta-grid">
-    <div class="cta-l">
-      <div class="cta-h">El servicio que necesitás<br>al <strong>mejor precio</strong></div>
-      <p class="cta-p">Enviá un WhatsApp o llamanos ahora y te pasamos presupuesto sin cargo. Atendemos todos los días, sin excepción.</p>
-      <div class="cta-btns">
-        <a href="https://wa.me/54911XXXXXXXX?text=Hola%20Rubén%2C%20quiero%20un%20presupuesto" class="btn-gold">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Generar Presupuesto
+      <h1 class="hero-h1">
+        Tu mudanza,<br>
+        <span style="color:#38bdf8;-webkit-text-fill-color:#38bdf8;"><span class="hl">en buenas</span></span> <span
+          style="color:#ffffff;-webkit-text-fill-color:#ffffff;">manos</span>
+      </h1>
+      <p class="hero-p">Más de 10 años realizando mudanzas y fletes en CABA, Gran Buenos Aires e interior del país.
+        Personal capacitado, flota propia y presupuesto sin cargo.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/54911XXXXXXXX?text=Hola%20Rubén%2C%20necesito%20un%20presupuesto" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Presupuesto Gratis
         </a>
-        <a href="tel:+54911XXXXXXXX" class="btn-outline-w">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Llamar ahora
+        <a href="#servicios" class="btn-secondary">Ver servicios →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="hstat-n">+10</div>
+          <div class="hstat-l">Años de exp.</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-n">24 hs</div>
+          <div class="hstat-l">Disponibles</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-n">100%</div>
+          <div class="hstat-l">Compromiso</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINI CARDS (below hero, replaced the hero-right panel) -->
+  <div class="mini-cards">
+    <div class="mc">
+      <div class="mc-ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+      </div>
+      <div>
+        <div class="mc-t">Mudanzas Familiares</div>
+        <div class="mc-s">CABA y Gran Buenos Aires</div>
+      </div>
+      <span class="mc-pill">24 hs</span>
+    </div>
+    <div class="mc">
+      <div class="mc-ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2" />
+          <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+          <line x1="12" y1="12" x2="12" y2="16" />
+          <line x1="10" y1="14" x2="14" y2="14" />
+        </svg>
+      </div>
+      <div>
+        <div class="mc-t">Mudanzas Empresariales</div>
+        <div class="mc-s">Oficinas y depósitos</div>
+      </div>
+      <span class="mc-pill">Profesional</span>
+    </div>
+    <div class="mc">
+      <div class="mc-ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="3 11 22 2 13 21 11 13 3 11" />
+        </svg>
+      </div>
+      <div>
+        <div class="mc-t">Interior del País</div>
+        <div class="mc-s">Todas las provincias</div>
+      </div>
+      <span class="mc-pill">Nacional</span>
+    </div>
+    <div class="mc">
+      <div class="mc-ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+      </div>
+      <div>
+        <div class="mc-t">Desalojos Judiciales</div>
+        <div class="mc-s">Depositario judicial</div>
+      </div>
+      <span class="mc-pill">Esp.</span>
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="ti">
+      <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12" />
+        </svg></div>
+      Personal capacitado
+    </div>
+    <div class="tsep"></div>
+    <div class="ti">
+      <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13" rx="1" />
+          <path d="M16 8h4l3 5v4h-7V8z" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
+        </svg></div>
+      Flota propia
+    </div>
+    <div class="tsep"></div>
+    <div class="ti">
+      <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg></div>
+      Atención 24 hs
+    </div>
+    <div class="tsep"></div>
+    <div class="ti">
+      <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg></div>
+      CABA, GBA e interior
+    </div>
+    <div class="tsep"></div>
+    <div class="ti">
+      <div class="ti-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23" />
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+        </svg></div>
+      Presupuesto sin cargo
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="tag">Lo que hacemos</div>
+    <h2 class="sec-title">Nuestros Servicios</h2>
+    <p class="sec-sub">Soluciones integrales para cada tipo de mudanza o flete, sin restricción horaria y con personal
+      especializado.</p>
+    <div class="sgrid">
+
+      <div class="scard">
+        <div class="scard-wm">01</div>
+        <div class="scard-head">
+          <div class="scard-ico-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <div class="scard-num-lbl">Servicio 01</div>
+        </div>
+        <div class="scard-name">Mudanzas Familiares y Empresariales</div>
+        <div class="scard-desc">Todos los días, las 24 hs. Personal capacitado para movimientos por escalera y/o
+          ascensor, sin riesgo alguno para tus pertenencias.</div>
+        <div class="scard-footer">
+          <span class="scard-tag">24 hs · Todos los días</span>
+          <div class="scard-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="scard-wm">02</div>
+        <div class="scard-head">
+          <div class="scard-ico-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <div class="scard-num-lbl">Servicio 02</div>
+        </div>
+        <div class="scard-name">Personal de Carga y Descarga</div>
+        <div class="scard-desc">Equipo especializado para el manejo seguro de muebles, electrodomésticos y objetos de
+          valor. Cuidamos cada detalle.</div>
+        <div class="scard-footer">
+          <span class="scard-tag">Profesional</span>
+          <div class="scard-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="scard-wm">03</div>
+        <div class="scard-head">
+          <div class="scard-ico-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="3 11 22 2 13 21 11 13 3 11" />
+            </svg>
+          </div>
+          <div class="scard-num-lbl">Servicio 03</div>
+        </div>
+        <div class="scard-name">Mudanzas al Interior del País</div>
+        <div class="scard-desc">Llegamos a todas las provincias. Realizamos fletes y mudanzas a la costa y cualquier
+          destino del interior. Consultanos.</div>
+        <div class="scard-footer">
+          <span class="scard-tag">Todo el país</span>
+          <div class="scard-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="scard-wm">04</div>
+        <div class="scard-head">
+          <div class="scard-ico-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="1" />
+              <path d="M16 8h4l3 5v4h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+          </div>
+          <div class="scard-num-lbl">Servicio 04</div>
+        </div>
+        <div class="scard-name">Mini Fletes y Repartos</div>
+        <div class="scard-desc">Amplia disponibilidad horaria. Repartos a emprendedores y empresas. Fletes a la costa e
+          interior del país. Consultanos sin compromiso.</div>
+        <div class="scard-footer">
+          <span class="scard-tag">Emprendedores · Empresas</span>
+          <div class="scard-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="scard-wm">05</div>
+        <div class="scard-head">
+          <div class="scard-ico-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+              <path d="M8 12s0-4 4-4 4 4 4 4-0 4-4 4-4-4-4-4z" stroke-dasharray="2 2" />
+            </svg>
+          </div>
+          <div class="scard-num-lbl">Servicio 05</div>
+        </div>
+        <div class="scard-name">Trabajos con Soga</div>
+        <div class="scard-desc">Cuando escalera o ascensor no son una opción, contamos con el equipo y la experiencia
+          para realizar el trabajo de forma segura.</div>
+        <div class="scard-footer">
+          <span class="scard-tag">Especializado</span>
+          <div class="scard-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="scard-wm">06</div>
+        <div class="scard-head">
+          <div class="scard-ico-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+          </div>
+          <div class="scard-num-lbl">Servicio 06</div>
+        </div>
+        <div class="scard-name">Desalojos Judiciales</div>
+        <div class="scard-desc">Flota completa, más de 10 años de experiencia. Hacemos depositario judicial con toda la
+          documentación requerida por ley.</div>
+        <div class="scard-footer">
+          <span class="scard-tag">Depositario judicial</span>
+          <div class="scard-arrow">→</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section id="quienes">
+    <div class="qwrap">
+      <div>
+        <div class="tag">Quiénes somos</div>
+        <h2 class="sec-title">Más de una década cuidando lo que más importa</h2>
+        <p class="sec-sub" style="margin-bottom:36px;">Una empresa con historia, presente en cada mudanza desde el
+          primer mueble hasta el último.</p>
+
+        <div class="qpillar">
+          <div class="qpillar-ico blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <div>
+            <div class="qpillar-title">+10 años de experiencia comprobada</div>
+            <div class="qpillar-text">Trayectoria sólida en miles de mudanzas de todo tipo y tamaño en Buenos Aires y el
+              interior.</div>
+          </div>
+        </div>
+
+        <div class="qpillar">
+          <div class="qpillar-ico gold">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <div>
+            <div class="qpillar-title">Responsabilidad en cada trabajo</div>
+            <div class="qpillar-text">Nos comprometemos con el mismo nivel de cuidado sin importar el tamaño del
+              servicio.</div>
+          </div>
+        </div>
+
+        <div class="qpillar">
+          <div class="qpillar-ico blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="1" />
+              <path d="M16 8h4l3 5v4h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+          </div>
+          <div>
+            <div class="qpillar-title">Flota y personal propios</div>
+            <div class="qpillar-text">Vehículos adecuados y personal capacitado para cada tipo de mudanza o flete.</div>
+          </div>
+        </div>
+
+        <div class="qpillar">
+          <div class="qpillar-ico gold">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <div>
+            <div class="qpillar-title">Soluciones rápidas y sin estrés</div>
+            <div class="qpillar-text">Nos adaptamos a tus tiempos para que tu mudanza sea simple, segura y sin
+              sorpresas.</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="qcard">
+          <div class="qcard-label">Nuestra promesa</div>
+          <div class="qcard-quote">Cada mudanza es única. Tratamos tus pertenencias con el mismo cuidado que si fueran
+            las nuestras.</div>
+          <div class="qcard-grid">
+            <div class="qstat">
+              <div class="qstat-n">CABA</div>
+              <div class="qstat-l">Ciudad de Bs. As.</div>
+            </div>
+            <div class="qstat">
+              <div class="qstat-n">GBA</div>
+              <div class="qstat-l">Gran Buenos Aires</div>
+            </div>
+            <div class="qstat">
+              <div class="qstat-n">24 hs</div>
+              <div class="qstat-l">Disponibilidad</div>
+            </div>
+            <div class="qstat">
+              <div class="qstat-n">Todo</div>
+              <div class="qstat-l">El interior del país</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso">
+    <div class="proc-header">
+      <div class="tag" style="justify-content:center;">Cómo funciona</div>
+      <h2 class="sec-title">Tu mudanza en 4 pasos simples</h2>
+      <p class="sec-sub">Sin complicaciones, sin sorpresas. Así de fácil es trabajar con nosotros.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-circle">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          <span class="snum">PASO 1</span>
+        </div>
+        <div class="step-title">Nos contactás</div>
+        <div class="step-desc">Por WhatsApp, teléfono o formulario. Respondemos en minutos.</div>
+      </div>
+      <div class="step">
+        <div class="step-circle">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+          <span class="snum">PASO 2</span>
+        </div>
+        <div class="step-title">Recibís presupuesto</div>
+        <div class="step-desc">Sin cargo, claro y detallado. Sin letras chicas ni sorpresas.</div>
+      </div>
+      <div class="step">
+        <div class="step-circle">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          <span class="snum">PASO 3</span>
+        </div>
+        <div class="step-title">Elegís fecha y hora</div>
+        <div class="step-desc">Coordinamos el día y horario que más te convenga. Somos flexibles.</div>
+      </div>
+      <div class="step">
+        <div class="step-circle">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <span class="snum">PASO 4</span>
+        </div>
+        <div class="step-title">¡Listo!</div>
+        <div class="step-desc">Realizamos la mudanza con profesionalismo, cuidado y puntualidad.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="tag">Contacto</div>
+    <h2 class="sec-title">Hablemos sin compromiso</h2>
+    <p class="sec-sub">Atendemos todos los días. Presupuesto rápido y sin cargo.</p>
+    <div class="cwrap">
+      <div>
+        <div class="cinfo-title">Estamos para ayudarte cuando lo necesitás</div>
+        <div class="cinfo-sub">Contactanos por el medio que prefieras. Respondemos a la brevedad.</div>
+        <div class="citem">
+          <div class="citem-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <div>
+            <div class="citem-lbl">Teléfono / WhatsApp</div>
+            <div class="citem-val">Consultanos directamente<br><small style="color:var(--text-4);">Respondemos a la
+                brevedad</small></div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="citem-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <div>
+            <div class="citem-lbl">Horario</div>
+            <div class="citem-val">Todos los días, las 24 hs</div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="citem-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div>
+            <div class="citem-lbl">Zona de cobertura</div>
+            <div class="citem-val">CABA, Gran Buenos Aires<br>e interior del país</div>
+          </div>
+        </div>
+        <a href="https://wa.me/54911XXXXXXXX?text=Hola%20Rubén%2C%20quiero%20un%20presupuesto" class="btn-primary"
+          style="margin-top:14px;display:inline-flex;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Enviar WhatsApp
         </a>
       </div>
+      <div class="fcard">
+        <h3>Solicitar presupuesto</h3>
+        <p>Completá el formulario y te contactamos a la brevedad.</p>
+        <div class="frow">
+          <div class="fg"><label>Nombre</label><input type="text" placeholder="Tu nombre completo"></div>
+          <div class="fg"><label>Teléfono</label><input type="tel" placeholder="Tu número"></div>
+        </div>
+        <div class="fg">
+          <label>Mensaje</label>
+          <textarea rows="4" placeholder="Origen, destino, tipo de elementos, fecha aproximada..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;justify-content:center;border-radius:10px;"
+          onclick="alert('¡Gracias! Nos comunicaremos a la brevedad.')">Enviar solicitud →</button>
+      </div>
     </div>
-    <div class="cta-r">
-      <div class="cta-features">
-        <div class="cf">
-          <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="cf-text">Presupuesto sin cargo, claro y sin letras chicas</div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta-final">
+    <div class="cta-grid">
+      <div class="cta-l">
+        <div class="cta-h">El servicio que necesitás<br>al <strong>mejor precio</strong></div>
+        <p class="cta-p">Enviá un WhatsApp o llamanos ahora y te pasamos presupuesto sin cargo. Atendemos todos los
+          días, sin excepción.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/54911XXXXXXXX?text=Hola%20Rubén%2C%20quiero%20un%20presupuesto" class="btn-gold">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+            Generar Presupuesto
+          </a>
+          <a href="tel:+54911XXXXXXXX" class="btn-outline-w">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            Llamar ahora
+          </a>
         </div>
-        <div class="cf">
-          <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-          <div class="cf-text">Flota propia y personal altamente capacitado</div>
-        </div>
-        <div class="cf">
-          <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="cf-text">Disponibles 24 hs, los 365 días del año</div>
-        </div>
-        <div class="cf">
-          <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="cf-text">CABA, Gran Buenos Aires e interior del país</div>
+      </div>
+      <div class="cta-r">
+        <div class="cta-features">
+          <div class="cf">
+            <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="rgba(255,255,255,.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg></div>
+            <div class="cf-text">Presupuesto sin cargo, claro y sin letras chicas</div>
+          </div>
+          <div class="cf">
+            <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13" rx="1" />
+                <path d="M16 8h4l3 5v4h-7V8z" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg></div>
+            <div class="cf-text">Flota propia y personal altamente capacitado</div>
+          </div>
+          <div class="cf">
+            <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg></div>
+            <div class="cf-text">Disponibles 24 hs, los 365 días del año</div>
+          </div>
+          <div class="cf">
+            <div class="cf-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
+            <div class="cf-text">CABA, Gran Buenos Aires e interior del país</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="f-logo">
-    <div class="f-logo-mark">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-logo">
+      <div class="f-logo-mark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13" rx="1" />
+          <path d="M16 8h4l3 5v4h-7V8z" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
+        </svg>
+      </div>
+      <div class="f-logo-text">Fletes <span>y</span> Mudanzas</div>
     </div>
-    <div class="f-logo-text">Fletes <span>Rubén</span></div>
-  </div>
-  <div class="f-copy">© 2025 Fletes Rubén — Todos los derechos reservados</div>
-  <div class="f-links">
-    <a href="#servicios">Servicios</a>
-    <a href="#quienes">Nosotros</a>
-    <a href="#proceso">Cómo funciona</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-</footer>
+    <div class="f-copy">© 2025 Fletes y Mudanzas — Todos los derechos reservados</div>
+    <!-- <div class="f-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#quienes">Nosotros</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </footer>-->
+
+    <!-- SCROLL ANIMATIONS SCRIPT -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        const sections = document.querySelectorAll('section:not(.hero), .mini-cards, .trust-bar, footer');
+        sections.forEach(sec => {
+          sec.classList.add('scroll-sec');
+          observer.observe(sec);
+        });
+      });
+    </script>
 
 </body>
+
 </html>
